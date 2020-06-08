@@ -13,6 +13,7 @@ for node in nodes:
     node_string += '"' + node + ':12345"'
     first = False
 
+
 for i, node in enumerate(nodes):
     config = ('TF_CONFIG='+'\'"\'"\'{"cluster": {"worker": ['+node_string+']}, "task": {"index": '+str(i)+', "type": "worker"}}\'"\'"\'')
     print(node)
